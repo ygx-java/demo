@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+		"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+ 
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+ 
+ 		<!-- 指定生成的java文件的编码,没有直接生成到项目时中文可能会乱码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+ 		
+		<!--自动实现Serializable接口-->
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+ 
+		<!-- 去除自动生成的注释 -->
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+ 
+		<!--数据库基本信息-->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+						connectionURL="jdbc:mysql://localhost:3306/solr_data?characterEncoding=UTF-8"
+						userId="root"
+						password="root">
+		</jdbcConnection>
+ 
+		<!--生成实体类的位置以及包的名字-->
+		<javaModelGenerator targetPackage="com.base.entity"
+							targetProject="src\main\java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+ 
+		<!--对应的表名，以及实体名-->
+		<table tableName="cast_user_tab" domainObjectName="User" ></table>
+	</context>
+</generatorConfiguration>
