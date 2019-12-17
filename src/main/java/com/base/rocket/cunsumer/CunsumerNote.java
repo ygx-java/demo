@@ -11,5 +11,5 @@ import org.springframework.stereotype.Service;
 		selectorExpression = "*",
 		consumeMode = ConsumeMode.ORDERLY)
 public class CunsumerNote {
-
+	
 }
