@@ -3,7 +3,6 @@ package com.base.lru.service;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import org.junit.Test;
 import org.springframework.stereotype.Service;
 import com.base.lru.dto.LRULinkedHashMap;
 
@@ -11,7 +10,6 @@ import com.base.lru.dto.LRULinkedHashMap;
 public class LurService {
 	
 	//利用LinkedHashMap实现lru算法
-//	@Test
 	public void test() {
 		//指定缓存最大容量为4
 		Map<Integer,Integer> map=new LRULinkedHashMap<>(4);
